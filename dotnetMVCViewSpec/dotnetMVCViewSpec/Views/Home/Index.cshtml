@@ -1,0 +1,14 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+@model IEnumerable<int>
+    
+@foreach (var item in @Model)
+{
+    @Html.Partial("_ShowMoneyPartial",@item)
+
+    @Html.DisplayFor( m=> @item, "ShowMoney")
+}
+
+@Html.Action("Money")
